@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Jake Kilmer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0F172A; color: #f8fafc; }
+        .slant { clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); }
+        .profile-border { border: 2px solid rgba(56, 189, 248, 0.3); }
+        /* The Slant Effect */
+        .slant-section {
+            clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+            margin-top: -50px;
+            padding: 120px 0;
+        }
+        .hero-bg {
+            background: linear-gradient(to bottom, rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.9)), 
+                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .bg-spotlight {
+            background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.1) 0%, transparent 50%);
+        }
+        .card-blur {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header class="relative flex items-center justify-center hero-bg overflow-hidden .hero-bg">
+        <div class="z-10 text-center px-6">
+            <div class="mt-4 flex justify-center">
+                <span class="px-4 py-1 border border-sky-500/50 text-sky-400 text-xs tracking-widest rounded-full uppercase font-bold">
+                    Code × Security
+                </span>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tighter">
+                JAKE <span class="text-sky-500">KILMER</span>
+            </h1>
+        </div>
+        <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#38bdf8 0.5px, transparent 0.5px); background-size: 30px 30px;"></div>
+    </header>
+    <nav class="p-6 max-w-6xl mx-auto"><a href="index.html" class="text-sky-500 hover:text-white transition">← Home</a></nav>
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-3 gap-12 items-start">
+            <div class="space-y-6">
+                <div class="bg-slate-800 rounded-3xl profile-border flex items-center justify-center overflow-hidden">
+                    <img class="sb-headshot" src="img/ses-machine-shop.webp" alt="Jake Kilmer">
+                </div>
+                <div class="glass p-4 rounded-xl border border-slate-800 text-xs text-slate-400">
+                    <p class="mb-2 uppercase tracking-widest font-bold text-sky-500">Fast Facts</p>
+                    <ul class="space-y-1">
+                        <li>Location: Los Angeles, USA</li>
+                        <li>Experience: 10+ Years Dev</li>
+                        <li>Focus: AppSec / Web Pentesting</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="md:col-span-2">
+                <h2 class="text-5xl font-black mb-8 italic">THE JOURNEY</h2>
+                <div class="prose prose-invert lg:prose-xl text-slate-300 space-y-6">
+                    <p class="text-xl leading-relaxed font-light italic text-white">
+                        "In music, a drummer provides the heartbeat—the steady, reliable structure that keeps the performance from collapsing. I’ve carried that same mindset into my 10+ years of software development..."
+                    </p>
+                    <p>
+                        I've spent a decade building digital products for law firms, e-commerce giants, and small businesses. But as the web evolved, I found myself less interested in just <em>how</em> things were built, and more interested in how they could be <em>broken</em>—and subsequently hardened.
+                    </p>
+                    <p>
+                        Transitioning into Cybersecurity was the logical next step. With my <strong>CompTIA Security+</strong> certification, a cybersecurity bootcamp under my belt, and my background in software development (HTML, CSS, JS, PHP, MySQL, SQL, NODE.JS, NEXT.JS, SUPABASE, PYTHON, WORDPRESS, COSMIC JS), I bring a unique "Builder's Perspective" to the offensive security world.
+                    </p>
+                    <h3 class="text-2xl font-bold text-sky-400 mt-12">Current Mission</h3>
+                    <p>
+                        When I'm not hunting for IDORs, XSS, SQL injection or refining my recon scripts, I'm likely working on a project to learn more from, like my recent 100-product e-commerce web application or practicing my drums or acoustic guitar. I believe the best security professionals are the ones who never stop being curious.
+                    </p>
+                </div>
+                <div class="mt-12 flex gap-4">
+                    <a href="development.html" class="bg-slate-800 hover:bg-sky-600 px-6 py-3 rounded-lg transition font-bold">See Dev Projects</a>
+                    <a href="mailto:jacobkilmercodes@gmail.com" class="bg-sky-600 hover:bg-sky-500 px-6 py-3 rounded-lg transition font-bold">Let's Connect</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="p-12 text-center text-slate-600 text-xs">
+        <p>&copy; 2026 jakekilmer.com</p>
+        <div class="mt-4">
+            <a href="musician.html" title="The Archives" class="opacity-60 hover:opacity-100 transition-opacity"><i class="fa-solid fa-drum text-lg"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jake Kilmer | Security & Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #020617; color: #f8fafc; overflow-x: hidden; }
+        /* The Slant Effect */
+        .slant-section {
+            clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+            margin-top: -50px;
+            padding: 120px 0;
+        }
+        .hero-bg {
+            background: linear-gradient(to bottom, rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.9)), 
+                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .bg-spotlight {
+            background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.1) 0%, transparent 50%);
+        }
+        .card-blur {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <header class="relative flex items-center justify-center hero-bg overflow-hidden">
+        <div class="z-10 text-center px-6">
+            <div class="mt-4 flex justify-center">
+                <span class="px-4 py-1 border border-sky-500/50 text-sky-400 text-xs tracking-widest rounded-full uppercase font-bold">
+                    Code × Security
+                </span>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tighter">
+                JAKE <span class="text-sky-500">KILMER</span>
+            </h1>
+        </div>
+        <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#38bdf8 0.5px, transparent 0.5px); background-size: 30px 30px;"></div>
+    </header>
+    <section class="py-20 bg-slate-900">
+        <div class="max-w-5xl mx-auto px-6">
+            <a href="index.html" class="text-sky-500 hover:text-white transition text-sm mb-8 inline-block">← Back to Security Profile</a>
+            <h2 class="text-4xl font-bold mb-4">Engineering Showcase</h2>
+            <p class="text-slate-400 mb-12 max-w-2xl">While my current focus is offensive security, my foundation is built on a decade of shipping production-ready code. Here is a look at my architectural experience.</p>
+            <div class="glass p-1 rounded-3xl overflow-hidden mb-12 border border-sky-500/30">
+                <div class="grid md:grid-cols-2 gap-8 p-8 items-center">
+                    <div>
+                        <span class="text-sky-400 text-xs font-bold uppercase tracking-widest">Current Project</span>
+                        <h3 class="text-3xl font-bold mt-2 mb-4 italic">Full-Scale E-Commerce Application</h3>
+                        <p class="text-slate-300 mb-6 leading-relaxed">
+                            A Wordpress/Woocommerce application featuring 100+ products. This isn't just about the UI; it's about building a clean, secure, scalable ecosystem for more products and functionality down the line.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-400 mb-6">
+                            <li><i class="fa-solid fa-check text-sky-500 mr-2"></i>Custom CSS</li>
+                            <li><i class="fa-solid fa-check text-sky-500 mr-2"></i>Custome PHP</li>
+                            <li><i class="fa-solid fa-check text-sky-500 mr-2"></i>Custom Plugins</li>
+                            <li><i class="fa-solid fa-check text-sky-500 mr-2"></i>Secure Authorize.net integration for checkout</li>
+                            <li><i class="fa-solid fa-check text-sky-500 mr-2"></i>Web Application Firewall (WAF)</li>
+                            <li><i class="fa-solid fa-check text-sky-500 mr-2"></i>Full SSL encryption</li>
+                            <li><i class="fa-solid fa-check text-sky-500 mr-2"></i>Optimized Asset Loading & SEO Architecture</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-800 h-64 flex items-center justify-center border border-slate-700">
+                        <span class="text-slate-500 italic"><img class="rounded-2xl" src="img/psl-webpage.webp" alt="Ecommerce Website"></span>
+                    </div>
+                </div>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Past Client Work</h3>
+            <div class="grid gap-6">
+                <div class="glass p-6 rounded-2xl">
+                    <h5 class="font-bold mb-2">Law Firm Portals</h5>
+                    <p class="text-xs text-slate-400 mb-4">Focus: Front end hand coding responsive sites from mobile to desktop view. Best S.E.O and W3C practices. A handful selected from the over 170 websites I coded for NextClient and Milemark Media.</p>
+                    <a href="https://www.yourfaircreditlawyer.com/" target="_blank"  class="text-sky-400 text-xs hover:underline">yourfaircreditlawyer.com</a> |
+                    <a href="https://www.shirazilaw.com/" target="_blank" class="text-sky-400 text-xs hover:underline">shirazilaw.com</a> |
+                    <a href="https://www.hsflawfirm.com/" target="_blank" class="text-sky-400 text-xs hover:underline">hsflawfirm.com</a> |
+                    <a href="https://www.joshi-law.com/" target="_blank" class="text-sky-400 text-xs hover:underline">joshi-law.com</a> |
+                    <a href="https://www.thestanleylawgroup.com/" target="_blank" class="text-sky-400 text-xs hover:underline">thestanleylawgroup.com</a> |
+                    <a href="https://www.koetherlaw.com/" target="_blank" class="text-sky-400 text-xs hover:underline">koetherlaw.com</a> |
+                    <a href="https://www.pittsburghdefenselawyers.com/" target="_blank" class="text-sky-400 text-xs hover:underline">pittsburghdefenselawyers.com</a>
+                </div>
+                </div>
+        </div>
+    </section>
+    <section id="contact" class="slant-section bg-sky-600 mb-[-50px]">
+        <div class="max-w-4xl mx-auto px-6 text-center py-10">
+            <h2 class="text-3xl md:text-5xl font-black text-white mb-6 uppercase tracking-tighter">Need help from an experienced developer?</h2>
+            <p class="text-sky-100 text-lg mb-8 italic">Currently looking for projects starting in April 2026.</p>
+            <a href="mailto:jacobkilmercodes@gmail.com.com" class="bg-white text-sky-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-slate-100 transition shadow-xl">Hire Me</a>
+        </div>
+    </section>
+    <footer class="p-12 text-center text-slate-600 text-xs">
+        <p>&copy; 2026 Jake Kilmer</p>
+        <div class="mt-4 transition-opacity">
+            <a class="opacity-60 hover:opacity-100" href="musician.html" title="The Archives"><i class="fa-solid fa-drum text-lg"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

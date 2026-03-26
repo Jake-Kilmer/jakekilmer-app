@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>jakekilmer.com</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link type="text/css" rel="stylesheet" href="style.css?t=201911>" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+<style>
+  html {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+}
+body {
+  color: #fff;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+.main-content {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0 35px 0;
+  /* transform: translate(0, -50%); */
+  /* top: 50%; */
+}
+.main-content h1 {
+  margin: 0 auto 30px auto;
+  font-size: 3em;
+  font-weight: 300;
+}
+.main-content h2 {
+  font-weight: 300;
+  margin: 30px auto 0;
+}
+.main-content p {
+  padding: 40px 20px 0 20px;
+  font-weight: 300;
+}
+.main-content section {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+@keyframes backDrop {
+  0% {
+    background-color: red;
+  }
+  33% {
+    background-color: green;
+  }
+  66% {
+    background-color: white;
+  }
+  100% {
+    background-color: red;
+  }
+}
+.main-drums {
+  margin: 0 auto;
+  padding: 0;
+  background-color: red;
+  position: relative;
+  -webkit-animation: backDrop 12s infinite;
+  animation: backDrop 12s infinite;
+  width: 280px;
+  height: 300px;
+  /* background-color: #fff; */
+  /* background-image: linear-gradient(to right, red , yellow); */
+}
+.main-drums li {
+  position: absolute;
+  list-style-type: none;
+  list-style-position: outside;
+}
+.main-drums li a {
+  display: block;
+  color: #000;
+  font-size: 0;
+}
+.main-kick {
+  bottom: 0;
+  left: 50%;
+  margin: 0 0 0 -75px;
+  z-index: 5;
+}
+.main-kick a {
+  background-color: blue;
+  width: 150px;
+  height: 150px;
+  border-radius: 300px;
+  position: relative;
+  border: 1px solid #000;
+}
+.main-kick a:before {
+  position: absolute;
+  content: "Under Construction";
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  top: 52px;
+  left: 23px;
+  z-index: 4;
+}
+.main-kick a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #000;
+  width: 120px;
+  height: 136px;
+  border-radius: 50%;
+  top: 8px;
+  left: 26px;
+}
+.main-snare {
+  right: 20px;
+  top: 150px;
+  z-index: 4;
+  transform: rotate(-7deg);
+  border: 1px solid #000;
+}
+.main-snare a {
+  background-color: grey;
+  width: 100px;
+  height: 40px;
+  position: relative;
+}
+.main-snare a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #000;
+  width: 70px;
+  height: 5px;
+  bottom: -9px;
+  right: -3px;
+  transform: rotate(-6deg);
+}
+.main-tom1 {
+  top: 80px;
+  right: 70px;
+  z-index: 6;
+  transform: rotate(-3deg);
+  border: 1px solid #000;
+}
+.main-tom1 a {
+  background-color: blue;
+  width: 75px;
+  height: 85px;
+  position: relative;
+}
+.main-tom1 a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #000;
+  width: calc(100% + 4px);
+  height: 4px;
+  top: 5px;
+  left: -2px;
+}
+.main-tom1 a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #000;
+  width: calc(100% + 4px);
+  height: 4px;
+  bottom: 5px;
+  left: -2px;
+}
+.main-tom2 {
+  bottom: 20px;
+  left: 0px;
+  transform: rotate(2deg);
+  z-index: 6;
+  border: 1px solid #000;
+}
+.main-tom2 a {
+  background-color: blue;
+  height: 115px;
+  width: 87px;
+  position: relative;
+}
+.main-tom2 a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #000;
+  width: calc(100% + 4px);
+  height: 4px;
+  top: 5px;
+  left: -2px;
+}
+.main-tom2 a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #000;
+  width: calc(100% + 4px);
+  height: 4px;
+  bottom: 5px;
+  left: -2px;
+}
+.hi-hat {
+  right: 10px;
+  top: 126px;
+  position: relative;
+}
+.hi-hat:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #000;
+  width: 50px;
+  height: 12px;
+  top: 159px;
+  left: -10px;
+}
+.hi-hat:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #000;
+  width: 2px;
+  height: 20px;
+  top: -12px;
+  left: 36px;
+}
+.hi-hat a {
+  background-color: yellow;
+  width: 70px;
+  height: 15px;
+  border-radius: 50%;
+  position: relative;
+}
+.hi-hat a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: yellow;
+  width: 70px;
+  height: 15px;
+  border-radius: 50%;
+  top: -18px;
+  left: 0;
+  z-index: 2;
+}
+.hi-hat a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #000;
+  width: 7px;
+  height: 150px;
+  bottom: -150px;
+  right: 30px;
+}
+.cymbal1 {
+  left: -16px;
+  top: 125px;
+  z-index: 7;
+  position: relative;
+}
+.cymbal1:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #000;
+  width: 7px;
+  height: 125px;
+  bottom: -125px;
+  left: 78px;
+}
+.cymbal1 a {
+  background-color: yellow;
+  width: 160px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+}
+.cymbal1 a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #000;
+  width: 7px;
+  height: 70px;
+  top: 124px;
+  left: 56px;
+  transform: rotate(40deg);
+}
+.cymbal1 a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #000;
+  width: 7px;
+  height: 70px;
+  top: 124px;
+  left: 100px;
+  transform: rotate(-40deg);
+}
+@media screen and (min-height: 500px) {
+  .main-content {
+    transform: translate(0, -50%);
+    top: 50%;
+  }
+}
+</style>
+</head>
+<body>
+  <article class="main-content">
+    <h1>Jake Kilmer</h1>
+    <section>
+      <ul class="main-drums">
+        <li class="main-kick"><a>Kick</a></li>
+        <li class="main-snare"><a>Snare</a></li>
+        <li class="main-tom1"><a>Tom 1</a></li>
+        <li class="main-tom2"><a>Tom 2</a></li>
+        <li class="hi-hat"><a>Hi-Hat</a></li>
+        <li class="cymbal1"><a>Cymbal 1</a></li>
+      </ul>
+    </section>
+    <h2>Coder/Musician</h2>
+  </article>
+</body>
+</html>
