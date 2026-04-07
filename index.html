@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
-        
         body { 
             background-color: #050505; 
             color: #e2e8f0; 
@@ -34,16 +33,49 @@
         }
 
         /* California Sunset Glow */
-        .hero-glow {
+        .hero-glow-cont {
+            overflow: hidden;
             position: absolute;
-            top: -10%;
-            right: -10%;
-            width: 50vw;
-            height: 50vw;
-            background: radial-gradient(circle, rgba(251, 191, 36, 0.08) 0%, rgba(5, 5, 5, 0) 70%);
+            right: 0;
+            top: 0;
             z-index: 0;
         }
+        @keyframes sunGlow {
+            0% { 
+                width: 1vw;
+                height: 1vw;
+                top: -100%;
+                right: -100%;
+            }
+            50% {
+                width: 45vw;
+                right: -50%;
+                height: 45vw;
+            }
+            80% {
+                width: 35vw;
+                top: 10%;
+                right: 0;
+                height: 35vw;
+            }
+            100% {
+                width: 50vw;
+                height: 50vw;
+                top: -10%;
+                right: -10%;
+            }
+        }
 
+        .hero-glow {
+            top: -10%;
+            right: -10%;
+            position: relative;
+            width: 50vw;
+            height: 50vw;
+            animation-name: sunGlow;
+            animation-duration: 8s;
+            background-image: radial-gradient(circle, rgba(251, 191, 36, 0.9) 25%, rgba(5, 5, 5, .8) 70%);
+        }
         .nav-link {
             position: relative;
             transition: color 0.3s;
@@ -74,10 +106,10 @@
 </head>
 <body class="antialiased">
 
-    <div class="hero-glow"></div>
+    <div class="hero-glow-cont"><div class="hero-glow"></div></div>
 
     <nav class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center backdrop-blur-sm bg-black/20">
-        <a href="#" class="font-black tracking-tighter text-2xl uppercase">JK<span class="text-amber-500">.</span></a>
+        <a href="/" class="font-black tracking-tighter text-2xl uppercase">JK<span class="text-amber-500">.</span></a>
         <div class="flex gap-8 text-[10px] uppercase tracking-[0.2em] font-bold">
             <a href="#about" class="nav-link">History</a>
             <a href="#projects" class="nav-link">Work</a>
@@ -86,8 +118,8 @@
     </nav>
 
     <section class="h-screen flex flex-col justify-center px-8 md:px-24 max-w-7xl mx-auto relative z-10">
-        <h1 class="reveal text-[12vw] md:text-[6vw] font-black leading-[0.9] tracking-tighter uppercase mb-6">
-            DEVELOPMENT<br><span class="text-gradient">MUSIC</span><br>CYBERSECURITY.
+        <h1 class="reveal text-[10vw] md:text-[6vw] font-black leading-[0.9] tracking-tighter uppercase mb-6">
+            DEVELOPMENT<br><span class="text-gradient">MUSIC</span><br>CYBERSECURITY
         </h1>
         <p class="reveal text-lg md:text-2xl text-slate-400 max-w-2xl font-light leading-relaxed">
             I’m Jake Kilmer. I’ve spent a decade learning and building <span class="text-white font-normal">scalable code</span>, managing production pipelines, and securing digital ecosystems. Based in Los Angeles.
