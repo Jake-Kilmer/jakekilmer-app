@@ -3,134 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jake Kilmer | Security & Development</title>
+    <title>Jake Kilmer | Digital Producer & Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #0F172A; color: #f8fafc; overflow-x: hidden; }
-        /* The Slant Effect */
-        .slant-section {
-            clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
-            margin-top: -50px;
-            padding: 120px 0;
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        
+        body { 
+            background-color: #050505; 
+            color: #e2e8f0; 
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
         }
 
-        .hero-bg {
-            background: linear-gradient(to bottom, rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.9)), 
-                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
         }
-        .bg-spotlight {
-            background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.1) 0%, transparent 50%);
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
-        
-        .card-blur {
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(56, 189, 248, 0.2);
+
+        .text-gradient {
+            background: linear-gradient(to right, #fbbf24, #f59e0b, #d4af37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* California Sunset Glow */
+        .hero-glow {
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(251, 191, 36, 0.08) 0%, rgba(5, 5, 5, 0) 70%);
+            z-index: 0;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #fbbf24;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+        }
+        .project-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(251, 191, 36, 0.3);
+            transform: translateY(-5px);
         }
     </style>
 </head>
-<body class="font-sans antialiased">
-    <header class="relative h-screen flex items-center justify-center hero-bg overflow-hidden">
-        <div class="z-10 text-center px-6">
-            <div class="mb-4 flex justify-center">
-                <span class="px-4 py-1 border border-sky-500/50 text-sky-400 text-xs tracking-widest rounded-full uppercase font-bold">
-                    Code × Security
-                </span>
-            </div>
-            <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tighter">
-                JAKE <span class="text-sky-500">KILMER</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
-                A Software Engineer pivoting into <span class="text-white font-medium italic underline decoration-sky-500">Cybersecurity</span>. 
-                Sec+ Certified. Bug Hunter. Problem Solver.
-            </p>
-            <div class="mt-10 flex gap-4 justify-center">
-                <a href="#projects" class="bg-sky-600 hover:bg-sky-500 text-white px-8 py-3 rounded-full font-bold transition-all transform hover:scale-105">View Findings</a>
-                <a href="#contact" class="border border-slate-700 hover:border-sky-500 px-8 py-3 rounded-full font-bold transition-all">Get in Touch</a>
-            </div>
+<body class="antialiased">
+
+    <div class="hero-glow"></div>
+
+    <nav class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center backdrop-blur-sm bg-black/20">
+        <a href="#" class="font-black tracking-tighter text-2xl uppercase">JK<span class="text-amber-500">.</span></a>
+        <div class="flex gap-8 text-[10px] uppercase tracking-[0.2em] font-bold">
+            <a href="#about" class="nav-link">History</a>
+            <a href="#projects" class="nav-link">Work</a>
+            <a href="mailto:jacobkilmercodes@gmail.com" class="nav-link text-amber-400">Hire</a>
         </div>
-        <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#38bdf8 0.5px, transparent 0.5px); background-size: 30px 30px;"></div>
-    </header>
-    <section class="slant-section bg-sky-900/20 relative z-20">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12 py-10">
-            <div class="text-center">
-                <i class="fa-solid fa-code text-4xl text-sky-500 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Development</h3>
-                <p class="text-slate-400 text-sm italic">Front end expertise and full stack experience. I build it, and I know how to break it.</p>
-            </div>
-            <div class="text-center">
-                <i class="fa-solid fa-shield-virus text-4xl text-sky-500 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Security+</h3>
-                <p class="text-slate-400 text-sm italic">Deep understanding of network security, threats, and risk management.</p>
-            </div>
-            <div class="text-center">
-                <i class="fa-solid fa-terminal text-4xl text-sky-500 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Offensive Ops</h3>
-                <p class="text-slate-400 text-sm italic">Focused on Web App Pentesting, Recon, and Bug Bounty hunting.</p>
+    </nav>
+
+    <section class="h-screen flex flex-col justify-center px-8 md:px-24 max-w-7xl mx-auto relative z-10">
+        <h1 class="reveal text-[12vw] md:text-[6vw] font-black leading-[0.9] tracking-tighter uppercase mb-6">
+            DEVELOPMENT<br><span class="text-gradient">MUSIC</span><br>CYBERSECURITY.
+        </h1>
+        <p class="reveal text-lg md:text-2xl text-slate-400 max-w-2xl font-light leading-relaxed">
+            I’m Jake Kilmer. I’ve spent a decade learning and building <span class="text-white font-normal">scalable code</span>, managing production pipelines, and securing digital ecosystems. Based in Los Angeles.
+        </p>
+        <div class="reveal mt-12 flex items-center gap-6">
+            <a href="#projects" class="bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-amber-400 transition-colors">See the Work</a>
+            <div class="flex gap-4 text-xl text-slate-500">
+                <a href="https://github.com/Jake-Kilmer" class="hover:text-white transition" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jacob-kilmer/" class="hover:text-white transition" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             </div>
         </div>
     </section>
-    <section id="projects" class="py-24 max-w-6xl mx-auto px-6">
-        <h2 class="text-4xl font-bold mb-12 flex items-center gap-4">
-            <span class="h-px w-12 bg-sky-500"></span> Proof of Work
-        </h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="card-blur p-8 rounded-2xl group hover:border-sky-500/60 transition-all">
-                <div class="flex justify-between items-start mb-6">
-                    <div>
-                        <h3 class="text-2xl font-bold group-hover:text-sky-400 transition">Chores Management App</h3>
-                        <p class="text-sky-500 text-xs font-mono mt-1">Apache • PHP • MySQL • Security Hardened</p>
-                    </div>
-                </div>
-                <p class="text-slate-400 mb-6 leading-relaxed">
-                    Built for testing/learning with a **Zero Trust** mindset. Implemented custom input sanitization and deep-link protection to prevent  XSS, SQL and IDOR vulnerabilities. 
+
+    <section id="about" class="py-32 px-8 md:px-24 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-start">
+            <div class="reveal">
+                <h2 class="text-xs uppercase tracking-[0.3em] text-amber-500 font-bold mb-4">Background</h2>
+                <h3 class="text-4xl font-bold mb-6">From National Tours to <span class="italic text-slate-500">Full-Stack Development.</span></h3>
+                <p class="text-slate-400 leading-relaxed mb-6">
+                    I approach a project like a live performance: it requires precision, timing, and attention to details.
+                    Whether it's working on fixing code, hosting/domain setup, splash pages, css updates, custom WP themes and plugins, eccommerce platforms or hunting for vulnerabilities(CompTIA Security+) through HackerOne(bugbounty), I deliver high-performance results.
                 </p>
                 <div class="flex gap-4">
-                    <a href="https://github.com/Jake-Kilmer/chores_app" target="_blank" class="text-sm font-bold border-b-2 border-sky-500 pb-1">View Code</a>
-               </div>
-            </div>
-            <div class="card-blur p-8 rounded-2xl group hover:border-sky-500/60 transition-all">
-                <div class="flex justify-between items-start mb-6">
-                    <div>
-                        <h3 class="text-2xl font-bold group-hover:text-sky-400 transition">Security Tooling</h3>
-                        <p class="text-sky-500 text-xs font-mono mt-1">Python</p>
-                    </div>
-                </div>
-                <p class="text-slate-400 mb-6 leading-relaxed">
-                    A recon script that scans a range of specified ports on a target to determine what is open or closed.
-                </p>
-                <div class="flex gap-4">
-                    <a href="https://github.com/Jake-Kilmer/scan_ports/blob/main/scan_ports.py" target="_blank" class="text-sm font-bold border-b-2 border-sky-500 pb-1">View Code</a>
+                    <span class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold border border-white/10 uppercase">10+ Years Dev</span>
+                    <span class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold border border-white/10 uppercase">Security+ Certified</span>
                 </div>
             </div>
-            <a href="about.html" class="md:col-span-1 glass p-8 rounded-3xl border-2 border-dashed border-slate-700 hover:border-sky-500/50 transition-all group flex flex-col justify-center items-center text-center">
-                <div class="bg-slate-800 w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:bg-sky-900 transition">
-                    <i class="fa-solid fa-code-branch text-sky-400"></i>
+
+            <div class="reveal space-y-8">
+                <h2 class="text-xs uppercase tracking-[0.3em] text-amber-500 font-bold">Currently Building</h2>
+                <div class="border-l-2 border-amber-500/30 pl-8 space-y-2">
+                    <h4 class="font-bold text-white uppercase">E-Commerce Application</h4>
+                    <p class="text-sm text-slate-500">Architecture for 100+ products with integrated payment security.</p>
                 </div>
-                <h3 class="text-xl font-bold mb-2">Software Engineering</h3>
-                <p class="text-slate-400 text-sm mb-4">
-                    Looking for my development work? View 10+ years of legacy builds, including my latest 100-product e-commerce application.
-                </p>
-                <span class="text-sky-400 font-bold text-xs uppercase tracking-widest">View Dev Portfolio →</span>
+                <div class="border-l-2 border-white/10 pl-8 space-y-2">
+                    <h4 class="font-bold text-white uppercase">Music Platform</h4>
+                    <p class="text-sm text-slate-500">Top secret music platform that will one day change the world.</p>
+                </div>
+                <div class="border-l-2 border-white/10 pl-8 space-y-2">
+                    <h4 class="font-bold text-white uppercase">AppSec Research</h4>
+                    <p class="text-sm text-slate-500">Active vulnerability hunting through HackerOne, OWASP-focused penetration testing methodologies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-32 px-8 md:px-24 max-w-7xl mx-auto">
+        <h2 class="reveal text-xs uppercase tracking-[0.3em] text-amber-500 font-bold mb-12 text-center">Selected Work</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            
+            <a href="development.html" class="reveal project-card p-10 rounded-3xl block group">
+                <div class="flex justify-between items-center mb-6">
+                    <i class="fa-solid fa-cart-shopping text-3xl text-amber-500"></i>
+                    <i class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 transition-all text-amber-500"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">E-Commerce Architecture</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Full-cycle Woocommerce/Wordpress application featuring 100+ products.</p>
             </a>
+
+            <a href="development.html" class="reveal project-card p-10 rounded-3xl block group">
+                <div class="flex justify-between items-center mb-6">
+                    <i class="fa-brands fa-wordpress text-3xl text-amber-500"></i>
+                    <i class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 transition-all text-amber-500"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">170+ Custom Themes</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Scaling production workflows at NextClient/Milemark, delivering WCAG-compliant, high-performance custom Wordpress themes for a national client base.</p>
+            </a>
+
         </div>
     </section>
-    <section id="contact" class="slant-section bg-sky-600 mb-[-50px]">
-        <div class="max-w-4xl mx-auto px-6 text-center py-10">
-            <h2 class="text-3xl md:text-5xl font-black text-white mb-6 uppercase tracking-tighter">Ready to secure your stack?</h2>
-            <p class="text-sky-100 text-lg mb-8 italic">Currently looking for opportunities in AppSec, Pentesting, or SOC Analysis.</p>
-            <a href="mailto:jacobkilmercodes@gmail.com.com" class="bg-white text-sky-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-slate-100 transition shadow-xl">Hire Me</a>
-        </div>
-    </section>
-    <footer class="p-12 text-center text-slate-600 text-xs">
-        <p>&copy; 2026 jakekilmer.com</p>
-        <div class="mt-4">
-            <a href="musician.html" title="The Archives" class="opacity-60 hover:opacity-100 transition-opacity"><i class="fa-solid fa-drum text-lg"></i></a>
+
+    <footer class="py-24 text-center border-t border-white/5">
+        <h2 class="text-3xl font-black mb-8 uppercase tracking-tighter">Ready to <span class="text-amber-500">Create?</span></h2>
+        <a href="mailto:jacobkilmercodes@gmail.com" class="text-xl font-light hover:text-amber-500 transition">jacobkilmercodes@gmail.com</a>
+        <div class="mt-12 text-slate-700 text-[10px] uppercase tracking-widest">
+            © 2026 Jake Kilmer | <a href="musician.html" class="hover:text-amber-500"><i class="fa-solid fa-drum"></i> Archives</a>
         </div>
     </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+
 </body>
 </html>
