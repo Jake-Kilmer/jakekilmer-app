@@ -6,6 +6,98 @@
     <title>Jake Kilmer | Digital Producer & Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="antialiased">
+
+    <div class="hero-glow-cont"><div class="hero-glow"></div></div>
+
+    <nav class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center backdrop-blur-sm bg-black/20">
+        <a href="/" class="font-black tracking-tighter text-2xl uppercase">JK<span class="text-amber-500">.</span></a>
+        <div class="flex gap-8 text-[10px] uppercase tracking-[0.2em] font-bold">
+            <a href="#about" class="nav-link">History</a>
+            <a href="#projects" class="nav-link">Work</a>
+            <a href="mailto:jacobkilmercodes@gmail.com" class="nav-link text-amber-400">Hire</a>
+        </div>
+    </nav>
+
+    <section class="h-screen flex flex-col justify-center px-8 md:px-24 max-w-7xl mx-auto relative z-10">
+        <h1 class="reveal text-[10vw] md:text-[6vw] font-black leading-[0.9] tracking-tighter uppercase mb-6">
+            DEVELOPMENT<br><span class="text-gradient">MUSIC</span><br>CYBERSECURITY
+        </h1>
+        <p class="reveal text-lg md:text-2xl text-slate-400 max-w-2xl font-light leading-relaxed">
+            I’m Jake Kilmer. I’ve spent a decade learning and building <span class="text-white font-normal">scalable code</span>, managing production pipelines, and securing digital ecosystems. Based in Los Angeles.
+        </p>
+        <div class="reveal mt-12 flex items-center gap-6">
+            <a href="#projects" class="bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-amber-400 transition-colors">See the Work</a>
+            <div class="flex gap-4 text-xl text-slate-500">
+                <a href="https://github.com/Jake-Kilmer" class="hover:text-white transition" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jacob-kilmer/" class="hover:text-white transition" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-32 px-8 md:px-24 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-start">
+            <div class="reveal">
+                <h2 class="text-xs uppercase tracking-[0.3em] text-amber-500 font-bold mb-4">Background</h2>
+                <h3 class="text-4xl font-bold mb-6">From National Tours to <span class="italic text-slate-500">Full-Stack Development.</span></h3>
+                <p class="text-slate-400 leading-relaxed mb-6">
+                    I approach a project like a live performance: it requires precision, timing, and attention to details.
+                    Whether it's working on fixing code, hosting/domain setup, splash pages, css updates, custom WP themes and plugins, eccommerce platforms or hunting for vulnerabilities(CompTIA Security+) through HackerOne(bugbounty), I deliver high-performance results.
+                </p>
+                <div class="flex gap-4">
+                    <span class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold border border-white/10 uppercase">10+ Years Dev</span>
+                    <span class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold border border-white/10 uppercase">Security+ Certified</span>
+                </div>
+            </div>
+
+            <div class="reveal space-y-8">
+                <h2 class="text-xs uppercase tracking-[0.3em] text-amber-500 font-bold">Currently Building</h2>
+                <div class="border-l-2 border-white/10 pl-8 space-y-2">
+                    <h4 class="font-bold text-white uppercase">Music Platform</h4>
+                    <p class="text-sm text-slate-500">Top secret music platform that will one day change the world.</p>
+                </div>
+                <div class="border-l-2 border-white/10 pl-8 space-y-2">
+                    <h4 class="font-bold text-white uppercase">AppSec Research</h4>
+                    <p class="text-sm text-slate-500">Active vulnerability hunting through HackerOne, OWASP-focused penetration testing methodologies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-32 px-8 md:px-24 max-w-7xl mx-auto">
+        <h2 class="reveal text-xs uppercase tracking-[0.3em] text-amber-500 font-bold mb-12 text-center">Selected Work</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            
+            <a href="development.html" class="reveal project-card p-10 rounded-3xl block group">
+                <div class="flex justify-between items-center mb-6">
+                    <i class="fa-solid fa-cart-shopping text-3xl text-amber-500"></i>
+                    <i class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 transition-all text-amber-500"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">E-Commerce Application</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Full-cycle Woocommerce/Wordpress application featuring 100+ products.</p>
+            </a>
+
+            <a href="development.html" class="reveal project-card p-10 rounded-3xl block group">
+                <div class="flex justify-between items-center mb-6">
+                    <i class="fa-brands fa-wordpress text-3xl text-amber-500"></i>
+                    <i class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 transition-all text-amber-500"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">170+ Custom Themes</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Scaling production workflows at NextClient/Milemark, delivering WCAG-compliant, high-performance custom Wordpress themes for a national client base.</p>
+            </a>
+
+        </div>
+    </section>
+
+    <footer class="py-24 text-center border-t border-white/5">
+        <h2 class="text-3xl font-black mb-8 uppercase tracking-tighter">Ready to <span class="text-amber-500">Create?</span></h2>
+        <a href="mailto:jacobkilmercodes@gmail.com" class="text-xl font-light hover:text-amber-500 transition">jacobkilmercodes@gmail.com</a>
+        <div class="mt-12 text-slate-700 text-[10px] uppercase tracking-widest">
+            © 2026 Jake Kilmer | <a href="musician.html" class="hover:text-amber-500"><i class="fa-solid fa-drum"></i> Archives</a>
+        </div>
+    </footer>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
         body { 
@@ -102,102 +194,15 @@
             border-color: rgba(251, 191, 36, 0.3);
             transform: translateY(-5px);
         }
+        .text-slate-400 {
+            --tw-text-opacity: 1;
+            color: rgb(203 219 241 / 94%);
+        }
+        .text-slate-500 {
+            --tw-text-opacity: 1;
+            color: rgb(171 83 83);
+        }
     </style>
-</head>
-<body class="antialiased">
-
-    <div class="hero-glow-cont"><div class="hero-glow"></div></div>
-
-    <nav class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center backdrop-blur-sm bg-black/20">
-        <a href="/" class="font-black tracking-tighter text-2xl uppercase">JK<span class="text-amber-500">.</span></a>
-        <div class="flex gap-8 text-[10px] uppercase tracking-[0.2em] font-bold">
-            <a href="#about" class="nav-link">History</a>
-            <a href="#projects" class="nav-link">Work</a>
-            <a href="mailto:jacobkilmercodes@gmail.com" class="nav-link text-amber-400">Hire</a>
-        </div>
-    </nav>
-
-    <section class="h-screen flex flex-col justify-center px-8 md:px-24 max-w-7xl mx-auto relative z-10">
-        <h1 class="reveal text-[10vw] md:text-[6vw] font-black leading-[0.9] tracking-tighter uppercase mb-6">
-            DEVELOPMENT<br><span class="text-gradient">MUSIC</span><br>CYBERSECURITY
-        </h1>
-        <p class="reveal text-lg md:text-2xl text-slate-400 max-w-2xl font-light leading-relaxed">
-            I’m Jake Kilmer. I’ve spent a decade learning and building <span class="text-white font-normal">scalable code</span>, managing production pipelines, and securing digital ecosystems. Based in Los Angeles.
-        </p>
-        <div class="reveal mt-12 flex items-center gap-6">
-            <a href="#projects" class="bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-amber-400 transition-colors">See the Work</a>
-            <div class="flex gap-4 text-xl text-slate-500">
-                <a href="https://github.com/Jake-Kilmer" class="hover:text-white transition" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/jacob-kilmer/" class="hover:text-white transition" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="py-32 px-8 md:px-24 max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-16 items-start">
-            <div class="reveal">
-                <h2 class="text-xs uppercase tracking-[0.3em] text-amber-500 font-bold mb-4">Background</h2>
-                <h3 class="text-4xl font-bold mb-6">From National Tours to <span class="italic text-slate-500">Full-Stack Development.</span></h3>
-                <p class="text-slate-400 leading-relaxed mb-6">
-                    I approach a project like a live performance: it requires precision, timing, and attention to details.
-                    Whether it's working on fixing code, hosting/domain setup, splash pages, css updates, custom WP themes and plugins, eccommerce platforms or hunting for vulnerabilities(CompTIA Security+) through HackerOne(bugbounty), I deliver high-performance results.
-                </p>
-                <div class="flex gap-4">
-                    <span class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold border border-white/10 uppercase">10+ Years Dev</span>
-                    <span class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold border border-white/10 uppercase">Security+ Certified</span>
-                </div>
-            </div>
-
-            <div class="reveal space-y-8">
-                <h2 class="text-xs uppercase tracking-[0.3em] text-amber-500 font-bold">Currently Building</h2>
-                <div class="border-l-2 border-amber-500/30 pl-8 space-y-2">
-                    <h4 class="font-bold text-white uppercase">E-Commerce Application</h4>
-                    <p class="text-sm text-slate-500">Architecture for 100+ products with integrated payment security.</p>
-                </div>
-                <div class="border-l-2 border-white/10 pl-8 space-y-2">
-                    <h4 class="font-bold text-white uppercase">Music Platform</h4>
-                    <p class="text-sm text-slate-500">Top secret music platform that will one day change the world.</p>
-                </div>
-                <div class="border-l-2 border-white/10 pl-8 space-y-2">
-                    <h4 class="font-bold text-white uppercase">AppSec Research</h4>
-                    <p class="text-sm text-slate-500">Active vulnerability hunting through HackerOne, OWASP-focused penetration testing methodologies.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="py-32 px-8 md:px-24 max-w-7xl mx-auto">
-        <h2 class="reveal text-xs uppercase tracking-[0.3em] text-amber-500 font-bold mb-12 text-center">Selected Work</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-            
-            <a href="development.html" class="reveal project-card p-10 rounded-3xl block group">
-                <div class="flex justify-between items-center mb-6">
-                    <i class="fa-solid fa-cart-shopping text-3xl text-amber-500"></i>
-                    <i class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 transition-all text-amber-500"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-2">E-Commerce Architecture</h3>
-                <p class="text-slate-500 text-sm leading-relaxed">Full-cycle Woocommerce/Wordpress application featuring 100+ products.</p>
-            </a>
-
-            <a href="development.html" class="reveal project-card p-10 rounded-3xl block group">
-                <div class="flex justify-between items-center mb-6">
-                    <i class="fa-brands fa-wordpress text-3xl text-amber-500"></i>
-                    <i class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 transition-all text-amber-500"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-2">170+ Custom Themes</h3>
-                <p class="text-slate-500 text-sm leading-relaxed">Scaling production workflows at NextClient/Milemark, delivering WCAG-compliant, high-performance custom Wordpress themes for a national client base.</p>
-            </a>
-
-        </div>
-    </section>
-
-    <footer class="py-24 text-center border-t border-white/5">
-        <h2 class="text-3xl font-black mb-8 uppercase tracking-tighter">Ready to <span class="text-amber-500">Create?</span></h2>
-        <a href="mailto:jacobkilmercodes@gmail.com" class="text-xl font-light hover:text-amber-500 transition">jacobkilmercodes@gmail.com</a>
-        <div class="mt-12 text-slate-700 text-[10px] uppercase tracking-widest">
-            © 2026 Jake Kilmer | <a href="musician.html" class="hover:text-amber-500"><i class="fa-solid fa-drum"></i> Archives</a>
-        </div>
-    </footer>
 
     <script>
         const observer = new IntersectionObserver((entries) => {
